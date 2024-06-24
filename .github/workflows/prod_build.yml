@@ -1,0 +1,43 @@
+## Build and deploy
+name: Build Prod and Deploy MBRU
+
+on:
+  push:
+    branches: [ "mbru-7_x" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout custom-7x branch
+        uses: actions/checkout@v4
+        with:
+          ref: 'mbru-7_x'
+
+      - name: Build with yarn using Node 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'yarn'
+      - run: yarn
+      - run: yarn build:prod
+
+      - name: Deploy via rsync
+        uses: burnett01/rsync-deployments@6.0.0
+        with:
+          switches: -avzr --delete
+          path: dist
+          remote_path: ${{ secrets.MBRU_PATH }}
+          remote_host: ${{ secrets.MBRU_HOST }}
+          remote_user: ${{ secrets.MBRU_USER }}
+          remote_key: ${{ secrets.MBRU_DEPLOY_KEY }}
+
+#      - name: Restart PM2 service
+#        uses: appleboy/ssh-action@v1.0.0
+#        with:
+#          host: ${{ secrets.MBRU_HOST }}
+#          username: ${{ secrets.MBRU_USER }}
+#          key: ${{ secrets.MBRU_DEPLOY_KEY }}
+#          port: ${{ secrets.MBRU_PORT }}
+#          script: ~/bin/dspace-pm2 restart
