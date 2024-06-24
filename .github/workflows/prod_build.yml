@@ -13,7 +13,7 @@ jobs:
       - name: Checkout custom-7x branch
         uses: actions/checkout@v4
         with:
-          ref: 'dspace-7_x'
+          ref: 'mbru-7_x'
 
       - name: Build with yarn using Node 18
         uses: actions/setup-node@v3
@@ -33,10 +33,10 @@ jobs:
           remote_user: ${{ secrets.MBRU_USER }}
           remote_key: ${{ secrets.MBRU_DEPLOY_KEY }}
 
-#      - name: Restart PM2 service
-#        uses: appleboy/ssh-action@v1.0.0
-#        with:
-#          host: ${{ secrets.MBRU_HOST }}
-#          username: ${{ secrets.MBRU_USER }}
-#          key: ${{ secrets.MBRU_DEPLOY_KEY }}
-#          script: ~/bin/dspace-pm2 restart
+      - name: Restart PM2 service
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.MBRU_HOST }}
+          username: ${{ secrets.MBRU_USER }}
+          key: ${{ secrets.MBRU_DEPLOY_KEY }}
+          script: ~/bin/dspace-pm2 restart
