@@ -39,5 +39,4 @@ jobs:
 #          host: ${{ secrets.MBRU_HOST }}
 #          username: ${{ secrets.MBRU_USER }}
 #          key: ${{ secrets.MBRU_DEPLOY_KEY }}
-#          port: ${{ secrets.MBRU_PORT }}
 #          script: ~/bin/dspace-pm2 restart
