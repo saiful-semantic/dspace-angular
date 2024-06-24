@@ -12,9 +12,11 @@
 
 /*** FONT FAMILIES ***/
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700;1,800&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/dubai-font@1.1.1/dubai-font/css/dubai-font.min.css');
 
-$font-family-sans-serif: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+//$font-family-sans-serif: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif: 'Dubai', Helvetica, sans-serif;
 
 
 /*** SEMANTIC COLOR SCHEME ***/
@@ -33,7 +35,7 @@ $font-family-sans-serif: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI"
 //$black:    #000;
 
 // Other colors (uncomment the variables that you want to override or that you need to use in this file)
-//$blue:    #007bff !default;
+$blue:    #002F70 !default;
 //$indigo:  #6610f2 !default;
 //$purple:  #6f42c1 !default;
 //$pink:    #e83e8c !default;
@@ -48,7 +50,7 @@ $font-family-sans-serif: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI"
 // ...
 
 // Override semantic colors here
-$primary:   #43515f;  // Gray
+$primary:   $blue;  // Gray
 $secondary: #495057;  // As Bootstrap $gray-700
 $success:   #92c642;  // Lime
 $info:      #207698;  // Light blue
@@ -70,7 +72,7 @@ $yiq-contrasted-threshold: 170;
 
 $body-color: #343a40;       // As Bootstrap $gray-800
 
-$link-color: #207698;       // Blue green, as DSpace $info
+$link-color: $blue;       // Blue green, as DSpace $info
 $link-decoration: none;
 $link-hover-color: darken($link-color, 15%);
 $link-hover-decoration: underline;

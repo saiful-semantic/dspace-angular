@@ -3,11 +3,11 @@
 :root {
 
   @include media-breakpoint-up(md) {
-    --ds-header-logo-height: 40px;
+    --ds-header-logo-height: 75px;
     --ds-header-height: 80px;
   }
   @include media-breakpoint-down(sm) {
-    --ds-header-logo-height: 50px;
+    --ds-header-logo-height: 55px;
     --ds-header-height: 90px;
   }
 
@@ -15,6 +15,7 @@
   --ds-banner-background-gradient-width: 300px;
 
   --ds-header-navbar-border-bottom-height: 5px;
+  --ds-header-navbar-border-bottom-color: #{$blue};
 
   /* set the next two properties as `--ds-header-navbar-border-bottom-*`
   in order to keep the bottom border of the header when navbar is expanded */
