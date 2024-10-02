@@ -1,0 +1,33 @@
+{
+
+  "person.page.birthdate": "Birth Date",
+
+  "person.page.edit": "Edit this item",
+
+  "person.page.email": "Email Address",
+
+  "person.page.firstname": "First Name",
+
+  "person.page.jobtitle": "Clinical Title",
+
+  "person.page.lastname": "Last Name",
+
+  "person.page.name": "Name",
+
+  "person.page.link.full": "Show all metadata",
+
+  "person.page.orcid": "ORCID",
+
+  "person.page.staffid": "Staff ID",
+
+  "person.page.titleprefix": "",
+
+  "person.page.researchArea": "Research Area",
+
+  "person.page.researchTopics": "Research Topics",
+
+  "person.page.specialty": "Specialty",
+
+  "person.page.affiliation.name": "Place",
+
+}

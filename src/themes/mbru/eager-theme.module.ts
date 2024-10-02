@@ -9,6 +9,9 @@ import { RootModule } from '../../app/root.module';
 import { NavbarModule } from '../../app/navbar/navbar.module';
 import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
 import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
+import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
+import { ItemSharedModule } from '../../app/item-page/item-shared.module';
+import { DsoPageModule } from '../../app/shared/dso-page/dso-page.module';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -22,6 +25,7 @@ const DECLARATIONS = [
   HeaderComponent,
   HeaderNavbarWrapperComponent,
   NavbarComponent,
+  PersonComponent
 ];
 
 @NgModule({
@@ -32,6 +36,8 @@ const DECLARATIONS = [
     ResultsBackButtonModule,
     RootModule,
     NavbarModule,
+    ItemSharedModule,
+    DsoPageModule,
   ],
   declarations: DECLARATIONS,
   providers: [
