@@ -33,29 +33,41 @@
                                     [fields]="['person.jobTitle']"
                                     [label]="'person.page.jobtitle'">
         </ds-generic-item-page-field>
+        <!--        <ds-generic-item-page-field [item]="object"-->
+        <!--                                    [fields]="['person.familyName']"-->
+        <!--                                    [label]="'person.page.lastname'">-->
+        <!--        </ds-generic-item-page-field>-->
+        <!--        <ds-generic-item-page-field [item]="object"-->
+        <!--                                    [fields]="['person.givenName']"-->
+        <!--                                    [label]="'person.page.firstname'">-->
+        <!--        </ds-generic-item-page-field>-->
+        <!--        <ds-generic-item-page-field [item]="object"-->
+        <!--                                    [fields]="['dc.title']"-->
+        <!--                                    [label]="'person.page.name'">-->
+        <!--        </ds-generic-item-page-field>-->
         <ds-generic-item-page-field [item]="object"
-                                    [fields]="['person.familyName']"
-                                    [label]="'person.page.lastname'">
+                                    [fields]="['person.affiliation.name']"
+                                    [label]="'person.page.affiliation.name'">
         </ds-generic-item-page-field>
         <ds-generic-item-page-field [item]="object"
-                                    [fields]="['person.givenName']"
-                                    [label]="'person.page.firstname'">
-        </ds-generic-item-page-field>
-        <ds-generic-item-page-field [item]="object"
-                                    [fields]="['dc.title']"
-                                    [label]="'person.page.name'">
+                                    [fields]="['person.specialty']"
+                                    [label]="'person.page.specialty'">
         </ds-generic-item-page-field>
         <ds-generic-item-page-field [item]="object"
                                     [fields]="['person.researchArea']"
                                     [label]="'person.page.researchArea'">
         </ds-generic-item-page-field>
-        <div>
-            <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']">
-                {{ "item.page.link.full" | translate }}
-            </a>
-        </div>
+        <ds-generic-item-page-field [item]="object"
+                                    [fields]="['person.researchTopics']"
+                                    [label]="'person.page.researchTopics'">
+        </ds-generic-item-page-field>
+        <!--        <div>-->
+        <!--            <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']">-->
+        <!--                {{ "item.page.link.full" | translate }}-->
+        <!--            </a>-->
+        <!--        </div>-->
     </div>
-    <div class="mt-5 w-100">
+    <div class="mt-3 w-100">
         <ds-tabbed-related-entities-search [item]="object"
                                            [relationTypes]="[{
                                           label: 'isAuthorOfPublication',
