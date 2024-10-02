@@ -21,6 +21,7 @@ jobs:
           node-version: '18.x'
           cache: 'yarn'
       - run: yarn
+      - run: yarn merge-i18n -s src/themes/mbru/assets/i18n
       - run: yarn build:prod
 
       - name: Deploy via rsync
